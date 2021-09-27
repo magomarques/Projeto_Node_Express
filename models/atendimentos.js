@@ -10,7 +10,7 @@ class Atendimento {
         const dataCriacao = moment().format('YYYY-MM-DD HH:MM:SS')
         const data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:MM:SS')
         
-        // Validações:
+        // Validações de dados de entrada:
         const dataValida = moment(data).isSameOrAfter(dataCriacao)
         const clienteValido = atendimento.cliente.length >= 5
         
